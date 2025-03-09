@@ -1,0 +1,320 @@
+/* スクロールスナップ */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+.page {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 1s ease-out; /* タイポグラフィアニメーション */
+    position: relative;
+}
+
+/* 1ページ目のレイアウト */
+#page1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+#page1 .content {
+    width: 65%; /* 左2/3 */
+    text-align: left;
+}
+
+#page1 .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#page1 .content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#page1 .photo-space {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd; /* 仮の背景色 */
+    border-radius: 50%; /* 円形の写真スペース */
+    overflow: hidden;
+}
+
+#page1 .photo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page1 .toc {
+    width: 30%; /* 右1/3 */
+    text-align: left;
+    border-left: 2px solid #8a9a5b; /* 目次の区切り線 */
+    padding-left: 20px;
+}
+
+#page1 .toc h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #6b4423; /* モスブラウン */
+}
+
+#page1 .toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#page1 .toc ul li {
+    margin: 10px 0;
+}
+
+#page1 .toc ul li a {
+    text-decoration: none;
+    color: #6b4423; /* モスブラウン */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#page1 .toc ul li a:hover {
+    color: #8a9a5b; /* モスグリーン */
+}
+
+/* 2ページ目: 志望動機 */
+#page2 {
+    background-color: #6b4423; /* モスブラウン */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10%);
+    background-size: 20px 20px;
+    padding: 0 10%;
+    text-align: left;
+}
+
+#page2 h2 {
+    color: white;
+}
+
+#page2 p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* 3ページ目: 学歴・スキル */
+#page3 {
+    background-color: #b5a642; /* モスイエロー */
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 20%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 20%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    padding: 0 10%;
+    text-align: left;
+}
+
+#page3 h2 {
+    color: white;
+}
+
+#page3 .timeline {
+    margin-bottom: 20px;
+}
+
+#page3 .event {
+    margin-bottom: 10px;
+}
+
+#page3 .event h3 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#page3 .event p {
+    color: white;
+    font-size: 1rem;
+}
+
+#page3 .skills {
+    margin-top: 20px;
+}
+
+#page3 .skills h3 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#page3 .skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#page3 .skills ul li {
+    color: white;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* 4ページ目: ポートフォリオ */
+#page4 {
+    background-color: #6c7a89; /* モスグレー */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 0 10%;
+}
+
+#page4 h2 {
+    color: white;
+}
+
+#page4 .portfolio {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#page4 .portfolio-item {
+    width: 18%;
+    position: relative;
+    cursor: pointer;
+}
+
+#page4 .portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#page4 .portfolio-item .portfolio-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+#page4 .portfolio-item:hover .portfolio-detail {
+    opacity: 1;
+}
+
+/* 5ページ目: Contact Me */
+#page5 {
+    background-color: #8a9a5b; /* モスグリーン */
+    background-image: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+    background-size: 40px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 付箋のデザイン */
+.sticky-note {
+    position: fixed; /* 画面に固定 */
+    bottom: -200px; /* 初期状態で画面外に配置 */
+    left: 20px; /* 画面左端に配置 */
+    width: 300px; /* 付箋の幅を大きくする */
+    padding: 20px;
+    background-color: #fff3b0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.sticky-note h3 {
+    margin-top: 0;
+}
+
+/* 付箋のポップアップ */
+.sticky-note.popup {
+    bottom: 20px; /* 画面下部に表示 */
+    opacity: 1;
+}
+
+/* タイポグラフィアニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ホバーエフェクト */
+.button {
+    padding: 10px 20px;
+    background-color: #8a9a5b; /* モスグリーン */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #6b4423; /* モスブラウン */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .page {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .sticky-note {
+        width: 80%; /* モバイルで付箋の幅を調整 */
+        left: 10%; /* 中央寄せ */
+    }
+
+    #page1 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #page1 .content, #page1 .toc {
+        width: 100%;
+        text-align: center;
+    }
+
+    #page1 .toc {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    #page4 .portfolio-item {
+        width: 48%; /* モバイルで2列表示 */
+        margin-bottom: 10px;
+    }
+}
+
+#page1 .photo-space {
+    width: 250px; /* 幅を変更 */
+    height: 250px; /* 高さを変更 */
+    border-radius: 10%; /* 角を丸くする */
+}
+
+#page1 .toc h3 {
+    font-family: "游明朝", "YuMincho", serif; /* 和風フォント */
+}
