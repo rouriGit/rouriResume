@@ -1,9 +1,10 @@
-/* スクロールスナップ */
+/* 基本設定 */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     scroll-snap-type: y mandatory;
+    font-family: Arial, sans-serif;
 }
 
 .page {
@@ -14,11 +15,12 @@ body, html {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    animation: fadeIn 1s ease-out; /* タイポグラフィアニメーション */
     position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* 1ページ目のレイアウト */
+/* 1ページ目: ホーム */
 #page1 {
     display: flex;
     justify-content: space-between;
@@ -27,7 +29,7 @@ body, html {
 }
 
 #page1 .content {
-    width: 65%; /* 左2/3 */
+    width: 65%;
     text-align: left;
 }
 
@@ -42,10 +44,10 @@ body, html {
 }
 
 #page1 .photo-space {
-    width: 200px;
-    height: 200px;
-    background-color: #ddd; /* 仮の背景色 */
-    border-radius: 50%; /* 円形の写真スペース */
+    width: 250px;
+    height: 250px;
+    background-color: #ddd;
+    border-radius: 10%;
     overflow: hidden;
 }
 
@@ -56,16 +58,17 @@ body, html {
 }
 
 #page1 .toc {
-    width: 30%; /* 右1/3 */
+    width: 30%;
     text-align: left;
-    border-left: 2px solid #8a9a5b; /* 目次の区切り線 */
+    border-left: 2px solid #8a9a5b;
     padding-left: 20px;
 }
 
 #page1 .toc h3 {
     margin-top: 0;
     font-size: 1.5rem;
-    color: #6b4423; /* モスブラウン */
+    color: #6b4423;
+    font-family: "游明朝", "YuMincho", serif;
 }
 
 #page1 .toc ul {
@@ -79,30 +82,35 @@ body, html {
 
 #page1 .toc ul li a {
     text-decoration: none;
-    color: #6b4423; /* モスブラウン */
+    color: #6b4423;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 #page1 .toc ul li a:hover {
-    color: #8a9a5b; /* モスグリーン */
+    color: #8a9a5b;
 }
 
 /* 2ページ目: 志望動機 */
 #page2 {
+    /* background-color: #6b4423;
+    color: white;
+    padding: 0 10%;
+    text-align: left; */
+
     background-color: #6b4423; /* モスブラウン */
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10%);
     background-size: 20px 20px;
     padding: 0 10%;
     text-align: left;
+    color: white;
 }
 
 #page2 h2 {
-    color: white;
+    margin-bottom: 20px;
 }
 
 #page2 p {
-    color: white;
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -117,10 +125,11 @@ body, html {
     background-position: 0 0, 25px 25px;
     padding: 0 10%;
     text-align: left;
+    color: white;
 }
 
 #page3 h2 {
-    color: white;
+    margin-bottom: 20px;
 }
 
 #page3 .timeline {
@@ -132,12 +141,10 @@ body, html {
 }
 
 #page3 .event h3 {
-    color: white;
     font-size: 1.2rem;
 }
 
 #page3 .event p {
-    color: white;
     font-size: 1rem;
 }
 
@@ -146,7 +153,6 @@ body, html {
 }
 
 #page3 .skills h3 {
-    color: white;
     font-size: 1.2rem;
 }
 
@@ -156,61 +162,370 @@ body, html {
 }
 
 #page3 .skills ul li {
-    color: white;
     font-size: 1rem;
     margin: 5px 0;
 }
 
 /* 4ページ目: ポートフォリオ */
 #page4 {
-    background-color: #6c7a89; /* モスグレー */
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-color: #6c7a89;
     padding: 0 10%;
 }
 
 #page4 h2 {
+    margin-bottom: 20px;
+}
+
+/* 基本設定 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 1ページ目: ホーム */
+#page1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+#page1 .content {
+    width: 65%;
+    text-align: left;
+}
+
+#page1 .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#page1 .content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#page1 .photo-space {
+    width: 250px;
+    height: 250px;
+    background-color: #ddd;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+#page1 .photo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page1 .toc {
+    width: 30%;
+    text-align: left;
+    border-left: 2px solid #8a9a5b;
+    padding-left: 20px;
+}
+
+#page1 .toc h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #6b4423;
+    font-family: "游明朝", "YuMincho", serif;
+}
+
+#page1 .toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#page1 .toc ul li {
+    margin: 10px 0;
+}
+
+#page1 .toc ul li a {
+    text-decoration: none;
+    color: #6b4423;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#page1 .toc ul li a:hover {
+    color: #8a9a5b;
+}
+
+/* 2ページ目: 志望動機 */
+#page2 {
+    /* background-color: #6b4423;
+    color: white;
+    padding: 0 10%;
+    text-align: left; */
+
+    background-color: #6b4423; /* モスブラウン */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10%);
+    background-size: 20px 20px;
+    padding: 0 10%;
+    text-align: left;
     color: white;
 }
 
-#page4 .portfolio {
+#page2 h2 {
+    margin-bottom: 20px;
+}
+
+#page2 p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* 3ページ目: 学歴・スキル */
+#page3 {
+    background-color: #b5a642; /* モスイエロー */
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 20%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 20%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    padding: 0 10%;
+    text-align: left;
+    color: white;
+}
+
+#page3 h2 {
+    margin-bottom: 20px;
+}
+
+#page3 .timeline {
+    margin-bottom: 20px;
+}
+
+#page3 .event {
+    margin-bottom: 10px;
+}
+
+#page3 .event h3 {
+    font-size: 1.2rem;
+}
+
+#page3 .event p {
+    font-size: 1rem;
+}
+
+#page3 .skills {
+    margin-top: 20px;
+}
+
+#page3 .skills h3 {
+    font-size: 1.2rem;
+}
+
+#page3 .skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#page3 .skills ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* 4ページ目: ポートフォリオ */
+/* 4ページ目: ポートフォリオ */
+#page4 {
+    background-color: #6c7a89;
+    padding: 0 10%;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ページ全体を表示 */
 }
 
-#page4 .portfolio-item {
-    width: 18%;
-    position: relative;
-    cursor: pointer;
+#page4 h2 {
+    margin-bottom: 20px;
+    color: white;
 }
 
-#page4 .portfolio-item img {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    border-radius: 5px;
+    max-width: 1200px;
+    position: relative;
 }
 
-#page4 .portfolio-item .portfolio-detail {
+.slider-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.project-panels {
+    display: flex;
+    width: 500%; /* 5パネル分の幅 */
+    transition: transform 0.5s ease; /* スムーズなアニメーション */
+    gap: 10px; /* パネル間の隙間を10pxに設定 */
+}
+
+.panel {
+    position: relative;
+    flex: 0 0 20%; /* 各パネルの幅を20%に固定 */
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    pointer-events: auto; /* クリックイベントを有効にする */
+}
+
+.panel:hover {
+    transform: scale(1.05);
+}
+
+.panel-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
+
+.panel-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.panel:hover .panel-overlay {
+    opacity: 1;
+}
+
+.panel-overlay h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.panel-overlay p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: -40px;
+}
+
+.right-arrow {
+    right: -40px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 最も高い値に設定 */
+}
+
+.overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    max-width: none;
+    max-height: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.details-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.slideshow {
+    flex: 1;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 5px;
 }
 
-#page4 .portfolio-item:hover .portfolio-detail {
-    opacity: 1;
+.slideshow img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.slideshow img:first-child {
+    display: block;
+}
+
+.details-text {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 /* 5ページ目: Contact Me */
@@ -222,30 +537,63 @@ body, html {
     background-size: 40px 40px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* 付箋のデザイン */
 .sticky-note {
     position: fixed; /* 画面に固定 */
-    bottom: -200px; /* 初期状態で画面外に配置 */
-    left: 20px; /* 画面左端に配置 */
-    width: 300px; /* 付箋の幅を大きくする */
+    width: 300px; /* 付箋の幅 */
     padding: 20px;
     background-color: #fff3b0;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: bottom 0.5s ease, opacity 0.5s ease;
+    opacity: 1; /* 常に表示 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: none; /* 初期状態では非表示 */
 }
 
 .sticky-note h3 {
     margin-top: 0;
 }
 
-/* 付箋のポップアップ */
-.sticky-note.popup {
-    bottom: 20px; /* 画面下部に表示 */
-    opacity: 1;
+.sticky-note p {
+    margin: 10px 0;
+}
+
+/* 付箋のホバーエフェクト */
+.sticky-note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* パソコン画面: 付箋を左下に配置 */
+@media (min-width: 769px) {
+    .sticky-note {
+        bottom: 20px; /* 下から20px */
+        left: 20px; /* 左から20px */
+    }
+}
+
+/* スマホ画面: 付箋を中央に配置 */
+@media (max-width: 768px) {
+    .sticky-note {
+        position: fixed; /* 固定を維持 */
+        width: 95%; /* 画面幅の95% */
+        height: auto; /* 高さは自動調整 */
+        top: 50%; /* 中央に配置 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto; /* 中央寄せ */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* タイポグラフィアニメーション */
@@ -254,67 +602,76 @@ body, html {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ホバーエフェクト */
-.button {
-    padding: 10px 20px;
+/* 5ページ目: Contact Me */
+#page5 {
     background-color: #8a9a5b; /* モスグリーン */
-    color: white;
-    border: none;
+    background-image: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+    background-size: 40px 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 付箋のデザイン */
+.sticky-note {
+    position: fixed; /* 画面に固定 */
+    width: 300px; /* 付箋の幅 */
+    padding: 20px;
+    background-color: #fff3b0;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    opacity: 1; /* 常に表示 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: none; /* 初期状態では非表示 */
 }
 
-.button:hover {
-    background-color: #6b4423; /* モスブラウン */
+.sticky-note h3 {
+    margin-top: 0;
 }
 
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-    .page {
-        padding: 20px;
-    }
+.sticky-note p {
+    margin: 10px 0;
+}
 
-    h1 {
-        font-size: 2rem;
-    }
+/* 付箋のホバーエフェクト */
+.sticky-note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
+/* パソコン画面: 付箋を左下に配置 */
+@media (min-width: 769px) {
     .sticky-note {
-        width: 80%; /* モバイルで付箋の幅を調整 */
-        left: 10%; /* 中央寄せ */
+        bottom: 20px; /* 下から20px */
+        left: 20px; /* 左から20px */
     }
+}
 
-    #page1 {
+/* スマホ画面: 付箋を中央に配置 */
+@media (max-width: 768px) {
+    .sticky-note {
+        position: fixed; /* 固定を維持 */
+        width: 95%; /* 画面幅の95% */
+        height: auto; /* 高さは自動調整 */
+        top: 50%; /* 中央に配置 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto; /* 中央寄せ */
+        display: flex;
         flex-direction: column;
-        padding: 20px;
-    }
-
-    #page1 .content, #page1 .toc {
-        width: 100%;
-        text-align: center;
-    }
-
-    #page1 .toc {
-        border-left: none;
-        padding-left: 0;
-        margin-top: 20px;
-    }
-
-    #page4 .portfolio-item {
-        width: 48%; /* モバイルで2列表示 */
-        margin-bottom: 10px;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-#page1 .photo-space {
-    width: 250px; /* 幅を変更 */
-    height: 250px; /* 高さを変更 */
-    border-radius: 10%; /* 角を丸くする */
-}
-
-#page1 .toc h3 {
-    font-family: "游明朝", "YuMincho", serif; /* 和風フォント */
+/* タイポグラフィアニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
