@@ -7,101 +7,159 @@
     <link rel="stylesheet" href="styles3.css">
 </head>
 <body>
+    <!-- 1ページ目 -->
     <div class="page" id="page1">
         <div class="content">
             <h1>Welcome to My Portfolio</h1>
             <p>Scroll down to explore more about me!</p>
             <div class="photo-space">
-                <img src="https://via.placeholder.com/200" alt="Profile Photo">
+                <img src="resources/Senior Photo 1.jpeg" alt="Profile Photo">
             </div>
         </div>
         <div class="toc">
             <h3>目次</h3>
             <ul>
-                <li><a href="#page1">Welcome</a></li>
                 <li><a href="#page2">志望動機</a></li>
                 <li><a href="#page3">学歴・スキル</a></li>
                 <li><a href="#page4">ポートフォリオ</a></li>
                 <li><a href="#page5">Contact Me</a></li>
             </ul>
         </div>
+        <!-- 1ページ目の付箋 -->
+        <div class="sticky-note" id="sticky-note-1">
+            <h3>Welcome!</h3>
+            <p>Scroll down to see my portfolio.</p>
+        </div>
     </div>
+
+    <!-- 2ページ目 -->
     <div class="page" id="page2">
         <h2>志望動機</h2>
         <p>
-            私は技術職のインターンに応募するにあたり、貴社の革新的なプロジェクトに貢献したいと考えています。特に、貴社が取り組んでいる最新技術や開発手法に強い関心を持っています。これまでの経験を通じて、JavaのコーディングやWebフロントエンドの開発、Webデザインのスキルを磨いてきました。これらのスキルを活かし、貴社のプロジェクトに積極的に参加し、チームの一員として成長していきたいと考えています。
+            私がプログラミングのインターンに応募する理由は、「コードを書く」だけでなく、「チームで創る」経験を積みたいからです。これまで個人開発を中心に学んできましたが、現場での実践的な開発を通じて、自分の考えを言語化し、他人と共有しながら進める力を養いたいと考えています。
+        </p>
+        <p>
+            また、実際の開発現場を体験することで、大学での学びをより具体的な方向へと導くヒントが得られるはずです。インターンを通じて、技術力だけでなく、コミュニケーションや協働の重要性を実感し、自分が将来どのような開発に携わりたいのか、そのビジョンを明確にしたいと思っています。
         </p>
     </div>
+
+    <!-- 3ページ目 -->
     <div class="page" id="page3">
         <h2>学歴・スキル</h2>
         <div class="timeline">
             <div class="event">
-                <h3>2016年 - 2019年</h3>
-                <p>〇〇高等学校 卒業</p>
+                <h3>2020年 - 2023年</h3>
+                <p>　　Wilbraham & Monson Academy (MA) 卒業</p>
             </div>
             <div class="event">
-                <h3>2019年 - 2023年</h3>
-                <p>〇〇大学 情報工学部 卒業</p>
+                <h3>2024年</h3>
+                <p>　　Gettysburg College 入学</p>
+                <p>　　　　　　　　2028年 卒業予定</p>
+                <p>　　Mathematical Economics 専攻</p>
+                <p>　　Computer Science 副専攻</p>
             </div>
         </div>
         <div class="skills">
-            <h3>スキル</h3>
+            <h3>スキル・資格</h3>
             <ul>
                 <li>Javaコーディング</li>
                 <li>Webフロントエンド開発 (HTML, CSS, JavaScript)</li>
-                <li>Webデザイン (Figma, Adobe XD)</li>
+                <li>その他</li>
+                <li>　　　ファイナンシャルプランナー検定 2級</li>
+                <li>　　　簿記 3級</li>
+                <li>　　　MOS Specialist Excel 2019, Word 2019</li>
             </ul>
         </div>
     </div>
+
+    <!-- 4ページ目 -->
     <div class="page" id="page4">
         <h2>ポートフォリオ</h2>
-        <div class="portfolio">
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/150" alt="Project 1">
-                <div class="portfolio-detail">
-                    <h3>Project 1</h3>
-                    <p>詳細な説明がここに入ります。</p>
+        <div class="container">
+            <div class="slider-container">
+                <button class="arrow left-arrow">&lt;</button>
+                <div class="project-panels">
+                    <!-- プロジェクトの概要パネル -->
+                    <div class="panel" data-id="1">
+                        <div class="panel-image" style="background-image: url('resources/無題のプレゼンテーション.jpg');"></div>
+                        <div class="panel-overlay">
+                            <h2>Project 1</h2>
+                            <p>概要1</p>
+                        </div>
+                    </div>
+                    <!-- <div class="panel" data-id="2">
+                        <div class="panel-image" style="background-image: url('image2.jpg');"></div>
+                        <div class="panel-overlay">
+                            <h2>Project 2</h2>
+                            <p>概要2</p>
+                        </div>
+                    </div>
+                    <div class="panel" data-id="3">
+                        <div class="panel-image" style="background-image: url('image3.jpg');"></div>
+                        <div class="panel-overlay">
+                            <h2>Project 3</h2>
+                            <p>概要3</p>
+                        </div>
+                    </div>
+                    <div class="panel" data-id="4">
+                        <div class="panel-image" style="background-image: url('image4.jpg');"></div>
+                        <div class="panel-overlay">
+                            <h2>Project 4</h2>
+                            <p>概要4</p>
+                        </div>
+                    </div>
+                    <div class="panel" data-id="5">
+                        <div class="panel-image" style="background-image: url('resources/無題のプレゼンテーション.jpg');"></div>
+                        <div class="panel-overlay">
+                            <h2>Project 5</h2>
+                            <p>概要5</p>
+                        </div>
+                    </div>
+                    <div class="panel" data-id="6">
+                        <div class="panel-image" style="background-image: url('resources/無題のプレゼンテーション.jpg');"></div>
+                        <div class="panel-overlay">
+                            <h2>Project 6</h2>
+                            <p>概要6</p>
+                        </div>
+                    </div> -->
                 </div>
+                <button class="arrow right-arrow">&gt;</button>
             </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/150" alt="Project 2">
-                <div class="portfolio-detail">
-                    <h3>Project 2</h3>
-                    <p>詳細な説明がここに入ります。</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/150" alt="Project 3">
-                <div class="portfolio-detail">
-                    <h3>Project 3</h3>
-                    <p>詳細な説明がここに入ります。</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/150" alt="Project 4">
-                <div class="portfolio-detail">
-                    <h3>Project 4</h3>
-                    <p>詳細な説明がここに入ります。</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/150" alt="Project 5">
-                <div class="portfolio-detail">
-                    <h3>Project 5</h3>
-                    <p>詳細な説明がここに入ります。</p>
+    
+            <!-- 詳細表示用のオーバーレイ -->
+            <div class="overlay">
+                <div class="overlay-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="details-container">
+                        <div class="slideshow">
+                            <img src="image1.jpg" alt="Project Image">
+                            <img src="image2.jpg" alt="Project Image" style="display:none;">
+                            <img src="image3.jpg" alt="Project Image" style="display:none;">
+                        </div>
+                        <div class="details-text">
+                            <h2>Project Title</h2>
+                            <p>詳細な説明がここに入ります。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- 5ページ目 -->
     <div class="page" id="page5">
         <h2>Contact Me</h2>
         <p>How to reach me for opportunities.</p>
-        <div class="sticky-note">
+        <!-- 5ページ目の付箋 -->
+        <div class="sticky-note" id="sticky-note-5">
             <h3>Contact Me</h3>
-            <p>Email: example@example.com</p>
-            <p>Phone: 123-456-7890</p>
+            <p>Email:</p>
+            <p>rouri09140914@gmail.com</p>
+            <p>linkedin:</p>
+            <p>https://www.linkedin.com/in/rouri-takahashi-a679511a7/</p>
         </div>
     </div>
-    <script src="script2.js"></script>
+
+    <script src="script3.js"></script>
 </body>
 </html>
