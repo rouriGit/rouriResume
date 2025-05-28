@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="styles2.css">
+    
 </head>
 <body>
     <!-- 1ページ目 -->
@@ -36,10 +37,16 @@
     <div class="page" id="page2">
         <h2>志望動機</h2>
         <p>
-            私がプログラミングのインターンに応募する理由は、「コードを書く」だけでなく、「チームで創る」経験を積みたいからです。これまで個人開発を中心に学んできましたが、現場での実践的な開発を通じて、自分の考えを言語化し、他人と共有しながら進める力を養いたいと考えています。
+            私がエンジニアインターンに応募する理由は、「コードを書く」だけでなく、「チームでプロダクトを創り上げる」経験を積みたいと考えているからです。
         </p>
         <p>
-            また、実際の開発現場を体験することで、大学での学びをより具体的な方向へと導くヒントが得られるはずです。インターンを通じて、技術力だけでなく、コミュニケーションや協働の重要性を実感し、自分が将来どのような開発に携わりたいのか、そのビジョンを明確にしたいと思っています。
+            これまで大学の授業や個人開発を通じて、Webアプリケーションの制作やアルゴリズムの実装などを行ってきました。たとえば、最近ではJavaFXを使ってGUIアプリケーションを開発し、ユーザーの操作に応じて図形を描画できる機能を実装しました。この経験を通じて、技術的な課題に取り組む面白さを実感しましたが、一方で「他者と協力しながら進める開発」の重要性とその難しさも感じるようになりました。
+        </p>
+        <p>
+            インターンでは、実際の開発現場でどのようにアイデアを共有し、コードの設計やレビューを通じてチーム全体で品質を高めていくのか、という実践的なスキルを学びたいと考えています。また、エンジニアとしてのキャリアを考えるうえで、自分がどの領域に強い関心を持っているのか、どのような開発スタイルに適性があるのかを知る大きなきっかけになるとも思っています。
+        </p>
+        <p>技術力だけでなく、チームでの協働やコミュニケーションの力も含めて、自分を一段上のステージに引き上げる経験として、このインターンに真摯に取り組みたいです。
+
         </p>
     </div>
 
@@ -73,93 +80,125 @@
     </div>
 
     <!-- 4ページ目 -->
-    <div class="page" id="page4">
-        <h2>ポートフォリオ</h2>
-        <div class="container">
-            <div class="slider-container">
-                <button class="arrow left-arrow">&lt;</button>
-                <div class="project-panels">
-                    <!-- プロジェクトの概要パネル -->
-                    <div class="panel" data-id="1">
-                        <div class="panel-image" style="background-image: url('resources/無題のプレゼンテーション.jpg');"></div>
-                        <div class="panel-overlay">
-                            <h2>Project 1</h2>
-                            <p>概要1</p>
-                        </div>
-                    </div>
-                    <!-- <div class="panel" data-id="2">
-                        <div class="panel-image" style="background-image: url('image2.jpg');"></div>
-                        <div class="panel-overlay">
-                            <h2>Project 2</h2>
-                            <p>概要2</p>
-                        </div>
-                    </div>
-                    <div class="panel" data-id="3">
-                        <div class="panel-image" style="background-image: url('image3.jpg');"></div>
-                        <div class="panel-overlay">
-                            <h2>Project 3</h2>
-                            <p>概要3</p>
-                        </div>
-                    </div>
-                    <div class="panel" data-id="4">
-                        <div class="panel-image" style="background-image: url('image4.jpg');"></div>
-                        <div class="panel-overlay">
-                            <h2>Project 4</h2>
-                            <p>概要4</p>
-                        </div>
-                    </div>
-                    <div class="panel" data-id="5">
-                        <div class="panel-image" style="background-image: url('resources/無題のプレゼンテーション.jpg');"></div>
-                        <div class="panel-overlay">
-                            <h2>Project 5</h2>
-                            <p>概要5</p>
-                        </div>
-                    </div>
-                    <div class="panel" data-id="6">
-                        <div class="panel-image" style="background-image: url('resources/無題のプレゼンテーション.jpg');"></div>
-                        <div class="panel-overlay">
-                            <h2>Project 6</h2>
-                            <p>概要6</p>
-                        </div>
-                    </div> -->
-                </div>
-                <button class="arrow right-arrow">&gt;</button>
-            </div>
+<div class="page" id="page4">
+    <header class="page4-header">
+        <h1>My Works Collection</h1>
+        <p class="subtitle-page4">これまでに制作した作品の記録</p>
+    </header>
     
-            <!-- 詳細表示用のオーバーレイ -->
-            <div class="overlay">
-                <div class="overlay-content">
-                    <span class="close-btn">&times;</span>
-                    <div class="details-container">
-                        <div class="slideshow">
-                            <img src="image1.jpg" alt="Project Image">
-                            <img src="image2.jpg" alt="Project Image" style="display:none;">
-                            <img src="image3.jpg" alt="Project Image" style="display:none;">
-                        </div>
-                        <div class="details-text">
-                            <h2>Project Title</h2>
-                            <p>詳細な説明がここに入ります。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container-page4" id="worksContainerPage4">
+        <!-- 作品はJavaScriptで動的に追加 -->
+    </div>
+    
+    <!-- モーダル -->
+    <div class="modal-page4" id="workModalPage4">
+        <div class="modal-content-page4">
+            <span class="close-modal-page4">&times;</span>
+            <div class="modal-image-page4" id="modalImagePage4"></div>
+            <h2 class="modal-title-page4" id="modalTitlePage4"></h2>
+            <p class="modal-year-page4" id="modalYearPage4"></p>
+            <p class="modal-desc-page4" id="modalDescPage4"></p>
+            <div class="modal-tags-page4" id="modalTagsPage4"></div>
         </div>
     </div>
+</div>
 
     <!-- 5ページ目 -->
     <div class="page" id="page5">
-        <h2>Contact Me</h2>
-        <p>How to reach me for opportunities.</p>
-        <!-- 5ページ目の付箋 -->
-        <div class="sticky-note" id="sticky-note-5">
-            <h3>Contact Me</h3>
-            <p>Email:</p>
-            <p>rouri09140914@gmail.com</p>
-            <p>linkedin:</p>
-            <p>https://www.linkedin.com/in/rouri-takahashi-a679511a7/</p>
+        <div class="container">
+            <div class="contact-container">
+                <div class="blogs-section">
+                    <!-- 留学ブログカード -->
+                    <div class="blog-card">
+                        <div class="blog-content">
+                            <h2 class="blog-title">留学ブログ</h2>
+                            <p class="blog-description">
+                                高校、大学での留学体験記。現地での学びや文化体験、
+                                現地学生との交流を私の留学コンサルのホームページで掲載させていただいています。
+                            </p>
+                        </div>
+                        <a href="https://www.ryugaku.com/blog/rouri-cultural-events.html" class="blog-link">
+                            <div class="arrow-container">
+                                <div class="arrow-button">
+                                    <div class="ripple"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- 個人ブログカード -->
+                    <div class="blog-card">
+                        <div class="blog-content">
+                            <h2 class="blog-title">Rouriブログ</h2>
+                            <p class="blog-description">
+                                私の個人的な活動をまとめたブログになります。
+                                留学コンサルのwebページでは掲載できないほど個人的な内容を投稿しております。
+                            </p>
+                        </div>
+                        <a href="https://rourigit.github.io/rouriBlog1/" class="blog-link">
+                            <div class="arrow-container">
+                                <div class="arrow-button">
+                                    <div class="ripple"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="icon">✉️</div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <a href="mailto:your.email@example.com">rouri09140914@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">📸</div>
+                            <div class="contact-text">
+                                <h3>instagram</h3>
+                                <p>@rouri_ngwood</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">🔗</div>
+                            <div class="contact-text">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/rouriGit" target="_blank">github.com/rouriGit</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">💼</div>
+                            <div class="contact-text">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/rouri-takahashi-a679511a7/" target="_blank">rouri-takahashi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollProgress = document.createElement('div');
+        scrollProgress.className = 'scroll-progress';
+        document.body.appendChild(scrollProgress);
+        
+        window.addEventListener('scroll', function() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.setProperty('--scroll', `${scrolled}%`);
+        });
+    });
+    </script>
+    
 </body>
 </html>
