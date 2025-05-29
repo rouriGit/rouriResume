@@ -1324,3 +1324,91 @@ body, html {
     gap: 5px;
     margin-top: auto; /* タグを下部に配置 */
 }
+
+
+
+
+
+
+/* Rouriブログのリンクメニュー */
+.blog-links-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.blog-card:hover .blog-links-container {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.blog-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: rgba(0, 113, 227, 0.05);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.blog-link-item:hover {
+    background-color: rgba(0, 113, 227, 0.1);
+    transform: translateX(5px);
+}
+
+.blog-link-item span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.arrow-icon {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.blog-link-item:hover .arrow-icon {
+    transform: translateX(3px);
+}
+
+/* 既存の矢印ボタンを調整 */
+.blog-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card:hover .arrow-container {
+    opacity: 0;
+}
+
+/* 既存の.blog-cardスタイルに以下を追加 */
+.blog-card {
+    /* 既存のスタイルはそのままに */
+    transition: all 0.4s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 既存の.arrow-containerスタイルに以下を追加 */
+.arrow-container {
+    transition: opacity 0.3s ease;
+}
