@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="styles2.css">
     
 </head>
 <body>
@@ -90,17 +90,17 @@
         <!-- 作品はJavaScriptで動的に追加 -->
     </div>
     
-    <!-- モーダル -->
     <div class="modal-page4" id="workModalPage4">
-        <div class="modal-content-page4">
-            <span class="close-modal-page4">&times;</span>
-            <div class="modal-image-page4" id="modalImagePage4"></div>
-            <h2 class="modal-title-page4" id="modalTitlePage4"></h2>
-            <p class="modal-year-page4" id="modalYearPage4"></p>
-            <p class="modal-desc-page4" id="modalDescPage4"></p>
-            <div class="modal-tags-page4" id="modalTagsPage4"></div>
-        </div>
+    <div class="modal-content-page4">
+        <span class="close-modal-page4">&times;</span>
+        <div class="modal-image-page4" id="modalImagePage4"></div>
+        <h2 class="modal-title-page4" id="modalTitlePage4"></h2>
+        <p class="modal-year-page4" id="modalYearPage4"></p>
+        <p class="modal-desc-page4" id="modalDescPage4"></p>
+        <!-- リンクコンテナを削除（JSで動的に追加） -->
+        <div class="modal-tags-page4" id="modalTagsPage4"></div>
     </div>
+</div>
 </div>
 
     <!-- 5ページ目 -->
@@ -185,7 +185,7 @@
         </div>
     </div>
 
-    <script src="script2.js"></script>
+    <script src="script3.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const scrollProgress = document.createElement('div');
