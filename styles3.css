@@ -960,6 +960,7 @@ body, html {
 }
 
 .container-page4 {
+    color: rgb(57, 54, 51);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
@@ -1034,6 +1035,7 @@ body, html {
 
 .modal-content-page4 {
     background: white;
+    color: rgb(57, 54, 51);
     border-radius: 10px;
     width: 80%;
     max-width: 800px;
@@ -1109,4 +1111,216 @@ body, html {
     .modal-image-page4 {
         height: 200px;
     }
+}
+
+
+
+
+
+
+
+/* リンクボタンのスタイル */
+.modal-link-page4 {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.modal-link-page4:hover {
+    background-color: #45a049;
+}
+
+.modal-link-container {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 4ページ目のスタイル */
+.page4-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitle-page4 {
+    color: #666;
+    font-style: italic;
+}
+
+.container-page4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.work-item-page4 {
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.work-item-page4:hover {
+    transform: translateY(-5px);
+}
+
+.work-image-page4 {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.work-info-page4 {
+    padding: 15px;
+}
+
+.work-title-page4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.work-year-page4 {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+
+.modal-link-page4 {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.modal-link-page4:hover {
+    text-decoration: underline;
+}
+
+.tags-page4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag-page4 {
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* モーダルのスタイル */
+.modal-page4 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-page4 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal-page4 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-image-page4 {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.modal-title-page4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.modal-year-page4 {
+    color: #666;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+}
+
+.modal-desc-page4 {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-link-container {
+    margin-bottom: 15px;
+}
+
+.modal-tags-page4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-tag-page4 {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+} 
+
+
+.work-info-page4 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 要素間の間隔を調整 */
+}
+
+.work-title-page4 {
+    margin: 0;
+    color: #333;
+    font-size: 18px; /* タイトルのサイズを調整 */
+}
+
+.tags-page4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: auto; /* タグを下部に配置 */
 }
